@@ -12,11 +12,12 @@ class Database {
     
     private static $prp ;
     private static $pdo ;
-    private static $instancia = null ;
+    private static $instance = null ;
 
-    public static function getInstancia():Database {
-        if(self::$instancia == null) self::$instancia = new Database();
-        return self::$instancia;
+
+    public static function getInstance():Database {
+        if(self::$instance == null) self::$instance = new Database();
+        return self::$instance;
     }
 
     private function __clone(){}
